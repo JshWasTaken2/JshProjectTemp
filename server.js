@@ -8,7 +8,7 @@ const path = require("path");
 
 app.use("/favicon.ico", express.static(path.join(__dirname, "public/favicon.ico")));
 
-//Fight Outcome responses - Replace Pastebin URL
+//Fight Outcome responses - Replace Pastebin URL - Make sure it is the raw link
 app.get("/randomline", async (req, res) => {
     try {
         const response = await axios.get("https://pastebin.com/raw/nwYG6VsA", {
@@ -25,7 +25,7 @@ app.get("/randomline", async (req, res) => {
     }
 });
 
-//Replace Pastebin URL
+//Replace Pastebin URL - Make sure it is the raw link
 app.get("/fight", async (req, res) => {
     const pastebinURL = "https://pastebin.com/raw/nwYG6VsA";
     const response = await fetch(pastebinURL);
