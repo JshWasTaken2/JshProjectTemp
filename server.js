@@ -7,6 +7,7 @@ const http = require("http");
 const path = require("path");
 
 app.get("/favicon.ico", (req, res) => res.status(204).end());
+app.get("/favicon.ico", (req, res) => res.status(204).end());
 
 //Fight Outcome responses - Replace Pastebin URL
 app.get("/randomline", async (req, res) => {
