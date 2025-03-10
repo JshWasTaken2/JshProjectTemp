@@ -60,24 +60,6 @@ app.get("/quotes", async (req, res) => {
     }
 });
 
-// Add a route for /api/fight
-app.get('/api/fight', (req, res) => {
-  const { sender, touser, randomChatter } = req.query;
-
-  // Validate query parameters
-  if (!sender) {
-    return res.status(400).send("Missing 'sender' parameter");
-  }
-
-  // Determine the target
-  const target = touser || randomChatter || "someone";
-
-  // Response message
-  const message = `${sender} picked a fight with ${target} $(urlfetch https://pastebin.com/raw/nwYG6VsA!)`;
-
-  res.status(200).send(message);
-});
-
 // Default route
 app.get("/", (req, res) => {
     res.send("Welcome to the Nightbot Queue Manager! Use /queue, /add-to-queue, /clear-queue, /open-queue, /close-queue, or /next.");
