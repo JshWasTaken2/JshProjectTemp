@@ -6,8 +6,8 @@ const axios = require("axios");
 const http = require("http");
 const path = require("path");
 
-app.get("/favicon.ico", (req, res) => res.status(204).end());
-app.get("/favicon.ico", (req, res) => res.status(204).end());
+const path = require("path");
+app.use("/favicon.ico", express.static(path.join(__dirname, "public/favicon.ico")));
 
 //Fight Outcome responses - Replace Pastebin URL
 app.get("/randomline", async (req, res) => {
