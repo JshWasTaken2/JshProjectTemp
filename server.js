@@ -37,7 +37,7 @@ app.get("/fight", async (req, res) => {
 
 // Handles quote commands
 app.get("/quotes", async (req, res) => {
-    const externalUrl = "https://twitch.center/customapi/quote/list?token=219131ad";
+    const externalUrl = "https://twitch.center/customapi/quote/list?token=cbb97b95";
 
     try {
         const response = await fetch(externalUrl);
