@@ -35,6 +35,15 @@ app.get("/fight", async (req, res) => {
     res.send(randomLine);
 });
 
+app.get("/fortune", async (req, res) => {
+    const pastebinURL = "https://pastebin.com/raw/yWdEv0qP";
+    const response = await fetch(pastebinURL);
+    const text = await response.text();
+    const lines = text.split("\n");
+    const randomLine = lines[Math.floor(Math.random() * lines.length)];
+    res.send(randomLine);
+});
+
 // Handles quote commands
 app.get("/quotes", async (req, res) => {
     const externalUrl = "https://twitch.center/customapi/quote/list?token=cbb97b95";
